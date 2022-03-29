@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Collections;
 
 use Balt\FreshDesk\Models\Tickets\TicketInterface;
@@ -7,14 +9,16 @@ use Balt\FreshDesk\Models\Tickets\TicketInterface;
 class TicketCollection implements TicketCollectionInterface
 {
     /**
-     * @param TicketInterface[] $tickets
+     * @param array<TicketInterface> $tickets
      */
-    public function __construct(private array $tickets) {}
+    public function __construct(private array $tickets)
+    {
+    }
 
     /**
-     * @return TicketInterface[]
+     * @return array<TicketInterface>
      */
-    public function all() : array
+    public function all(): array
     {
         return $this->tickets;
     }

@@ -14,5 +14,13 @@
     "require": {
         "guzzlehttp/guzzle": "^7.4",
         "nesbot/carbon": "^2.57"
+    },
+    "require-dev": {
+        "nunomaduro/phpinsights": "^2.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

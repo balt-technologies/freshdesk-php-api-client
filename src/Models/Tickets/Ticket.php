@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Models\Tickets;
 
 use Balt\FreshDesk\Models\Requesters\RequesterInterface;
@@ -16,8 +18,8 @@ class Ticket implements TicketInterface
         private ?string $type,
         private DateTimeImmutable $createdAt,
         private DateTimeImmutable $updatedAt
-    ) {}
-
+    ) {
+    }
 
     public function getId(): int
     {

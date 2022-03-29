@@ -1,11 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Models\Configurations;
 
 class Configuration implements ConfigurationInterface
 {
-
-    public function __construct(private string $apiKey, private string $domain) {}
+    public function __construct(private string $apiKey, private string $domain)
+    {
+    }
 
     public function getApiKey(): string
     {

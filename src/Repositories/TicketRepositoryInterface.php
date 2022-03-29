@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Repositories;
 
 use Balt\FreshDesk\Collections\TicketCollectionInterface;

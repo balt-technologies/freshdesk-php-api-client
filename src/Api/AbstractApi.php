@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Api;
 
 use GuzzleHttp\Psr7\Request;
@@ -8,7 +10,9 @@ class AbstractApi implements ApiInterface
 {
     protected string $endpoint;
 
-    public function __construct(private ApiClient $client) {}
+    public function __construct(private ApiClient $client)
+    {
+    }
 
     public function list(array $filter = []): array
     {
@@ -28,5 +32,4 @@ class AbstractApi implements ApiInterface
     {
         return $this->endpoint;
     }
-
 }

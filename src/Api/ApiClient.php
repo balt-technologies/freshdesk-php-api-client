@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Api;
 
 use Balt\FreshDesk\Models\Configurations\ConfigurationInterface;
@@ -17,12 +19,12 @@ class ApiClient implements ClientInterface
         $this->client = new Client([
             'base_uri' => 'https://'.$this->configuration->getDomain(),
             'headers' => [
-                'Content-Type'  => 'application/json',
+                'Content-Type' => 'application/json',
             ],
             'auth' => [
                 $this->configuration->getApiKey(),
-                'X'
-            ]
+                'X',
+            ],
         ]);
     }
 

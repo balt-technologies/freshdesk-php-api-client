@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Factories;
 
 use Balt\FreshDesk\Models\Requesters\Requester;

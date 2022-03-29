@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Factories;
 
 use Balt\FreshDesk\Models\Tickets\Ticket;
@@ -10,7 +12,6 @@ class TicketFactory
 {
     public function __construct(private RequesterFactory $requesterFactory)
     {
-
     }
 
     public function createFromApi(array $data): TicketInterface
@@ -27,7 +28,5 @@ class TicketFactory
             createdAt: CarbonImmutable::parse($data['created_at']),
             updatedAt: CarbonImmutable::parse($data['updated_at']),
         );
-
     }
-
 }

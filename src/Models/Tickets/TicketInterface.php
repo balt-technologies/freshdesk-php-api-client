@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Models\Tickets;
 
 use Balt\FreshDesk\Models\Requesters\RequesterInterface;

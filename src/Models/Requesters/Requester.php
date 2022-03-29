@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Balt\FreshDesk\Models\Requesters;
 
 class Requester implements RequesterInterface
@@ -8,8 +10,8 @@ class Requester implements RequesterInterface
         private ?string $email,
         private ?string $name,
         private ?string $phone
-    ){}
-
+    ) {
+    }
 
     public function getName(): ?string
     {
