@@ -11,11 +11,11 @@ interface TicketInterface
 
     public function getSubject(): string;
 
-    public function getDescription(): string;
+    public function getDescription(): ?string;
 
     public function getStatus(): int;
 
-    public function getType(): string;
+    public function getType(): ?string;
 
     public function getCreated(): DateTimeImmutable;
 

@@ -18,9 +18,12 @@ This is a basic example and doesn't wrap anything in models yet.
     
     $client = new ApiClient($configuration);
     $ticketApi = new TicketApi($client);
+    $ticketRepository = new TicketRepository($ticketApi, new TicketFactory(new RequesterFactory()));
+    $tickets = $ticketRepository->list();
     
-    // just dump everything
-    print_r($ticketApi->list());
+    foreach($tickets->all() as $ticket) {
+        echo '- ' . $ticket->getSubject() . PHP_EOL;
+    }
 
 # Feedback and Support
 For Feedback and any support contact us via our website (link below).

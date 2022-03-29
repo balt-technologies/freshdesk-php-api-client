@@ -10,10 +10,10 @@ class Ticket implements TicketInterface
     public function __construct(
         private int $id,
         private string $subject,
-        private string $description,
+        private ?string $description,
         private RequesterInterface $requester,
         private int $status,
-        private string $type,
+        private ?string $type,
         private DateTimeImmutable $createdAt,
         private DateTimeImmutable $updatedAt
     ) {}
@@ -29,7 +29,7 @@ class Ticket implements TicketInterface
         return $this->subject;
     }
 
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -39,7 +39,7 @@ class Ticket implements TicketInterface
         return $this->status;
     }
 
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
