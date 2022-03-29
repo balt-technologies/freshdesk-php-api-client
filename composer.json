@@ -1,0 +1,17 @@
+{
+    "name": "balt-technologies/freshdesk-php-api-client",
+    "autoload": {
+        "psr-4": {
+            "Balt\\FreshDesk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tobias Redmann",
+            "email": "tobias.redmann@balt.de"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    }
+}
