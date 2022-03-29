@@ -5,7 +5,7 @@ namespace Balt\FreshDesk\Models\Configurations;
 class Configuration implements ConfigurationInterface
 {
 
-    public function __construct(private string $apiKey, private string $domain, private string $password) {}
+    public function __construct(private string $apiKey, private string $domain) {}
 
     public function getApiKey(): string
     {
@@ -15,10 +15,5 @@ class Configuration implements ConfigurationInterface
     public function getDomain(): string
     {
         return $this->domain;
-    }
-
-    public function getPassword(): string
-    {
-        return $this->password;
     }
 }

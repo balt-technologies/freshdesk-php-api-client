@@ -7,6 +7,4 @@ interface ConfigurationInterface
     public function getApiKey(): string;
 
     public function getDomain(): string;
-
-    public function getPassword(): string;
 }

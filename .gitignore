@@ -1,1 +1,4 @@
 /vendor/
+/examples/tickets.php
+/.idea
+examples/tickets.php
